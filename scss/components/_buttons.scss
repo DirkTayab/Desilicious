@@ -1,0 +1,53 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.btn {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  &.bg--secondary {
+    @extend .btn;
+    background-color: $clr--secondary;
+    border-radius: 2rem;
+    color: $clr--light;
+    font-weight: 600;
+    &:hover {
+      background-color: $clr--light;
+      border: 1px solid $clr--secondary;
+      color: $clr--secondary;
+    }
+  }
+  &.bg--clear {
+    @extend .btn;
+    background-color: transparent;
+    border-radius: 2rem;
+    color: $clr--secondary;
+    border: 1px solid $clr--secondary;
+    &:hover {
+      background-color: $clr--secondary;
+      border: 1px solid $clr--secondary;
+      color: $clr--light;
+    }
+  }
+  &.radius {
+    @extend .bg--clear;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+  }
+  &.bg--footer {
+    @extend .btn;
+    padding: 0.2rem 2rem;
+    background-color: $clr--secondary;
+    border-radius: 2rem;
+    color: $clr--light;
+    border: 1px solid transparent;
+    font-weight: 600;
+    &:hover {
+      background-color: $clr--light;
+      border: 1px solid $clr--secondary;
+      color: $clr--secondary;
+    }
+  }
+}

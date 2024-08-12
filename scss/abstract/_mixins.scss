@@ -1,0 +1,37 @@
+@mixin between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin centerAll{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+@mixin evengrid($cols, $gap){
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+}
+@mixin unevengrid($cols, $gap){
+    display: grid;
+    grid-template-columns: $cols;
+    gap: $gap;
+}
+@mixin bgImg-size{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@mixin imgCover($width: 300px, $height:300px){
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    object-position: center;
+}
+@mixin mediaQuery($width){
+    @media screen and (max-width:$width){
+        @content;
+    }
+}

@@ -1,0 +1,26 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.header{
+    padding: 1rem 0;
+    position: sticky;
+    box-shadow: rgba(227, 49, 10, .9) 0px 40px 120px;
+
+    &__wrapper{
+        @include between;
+    }
+    &__logo img{
+        width: 10rem;
+        height: 3rem;
+    }
+    &__nav{
+        display: flex;
+        gap: 1rem;
+        li a{
+            color: $clr--light;
+            &:hover{
+                color: $clr--secondary;
+            }
+        }
+    }
+}

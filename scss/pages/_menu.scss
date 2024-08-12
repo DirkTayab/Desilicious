@@ -1,0 +1,47 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.menuList {
+  padding: 5rem 0;
+
+  &__title {
+    @include centerAll;
+    flex-direction: column;
+    margin: 3rem 0;
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-family: $font-secondary;
+    }
+  }
+  &__wrapper {
+    @include centerAll;
+    display: flex;
+    flex-direction: column;
+    max-width: 110rem;
+
+    img {
+      border-radius: 2rem;
+      max-width: 73vw;
+    }
+  }
+  &__content {
+    @include evengrid(2, 1rem);
+    justify-items: center;
+    gap: 25rem;
+  }
+  &__food {
+    ul {
+      @include between;
+      li {
+        color: $clr--secondary;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+    p {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+}
