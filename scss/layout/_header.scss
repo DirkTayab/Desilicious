@@ -4,7 +4,7 @@
 .header{
     padding: 1rem 0;
     position: sticky;
-    box-shadow: rgba(227, 49, 10, .9) 0px 40px 120px;
+    box-shadow: rgba(227, 49, 10, .2) 0px 4px 12px;
 
     &__wrapper{
         @include between;

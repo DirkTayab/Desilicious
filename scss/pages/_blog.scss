@@ -1,0 +1,25 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.blog {
+  padding: 5rem 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  &__card {
+    img {
+      border-radius: 1rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+      padding-top: 2rem;
+    }
+    p {
+      padding-bottom: 1.5rem;
+    }
+  }
+}

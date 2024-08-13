@@ -4,7 +4,7 @@ $colors: (
     "dark": $clr--dark,
     "light": $clr--light,
     "primary": $clr--primary,
-    "seoondary": $clr--secondary,
+    "secondary": $clr--secondary,
 );
 
 @each $key, $val in $colors{
