@@ -961,7 +961,7 @@ img {
   margin: 0 auto;
   max-width: 50rem;
 }
-.contact__wrapper img {
+.contact__wrapper iframe {
   border-radius: 1rem;
 }
 .contact__wrapper h4 {
