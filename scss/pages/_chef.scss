@@ -2,7 +2,7 @@
 @use "../base/" as *;
 
 .chefs {
-  padding: 2rem 0;
+  padding: 8rem 0;
   @include centerAll;
   &__title {
     padding-bottom: 2rem;
@@ -24,6 +24,14 @@
     }
     img {
       border-radius: 1rem;
+    }
+  }
+}
+// Mobile Responsive
+@include mediaQuery(520px){
+  .chefs{
+    &__wrapper{
+      @include evengrid(1, 5rem);
     }
   }
 }

@@ -2,7 +2,7 @@
 @use "../base/" as *;
 
 .contact {
-  padding: 2.5rem 0;
+  padding: 8rem 0;
   &__info {
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@
   &__name {
     display: flex;
     input[type="text"] {
-      width: 23.5rem;
+      width: 24rem;
     }
     span {
       text-align: start;
@@ -70,5 +70,23 @@
   }
   span {
     padding-left: 1rem;
+  }
+}
+
+// Mobile Responsive
+@include mediaQuery(520px) {
+  .contact {
+    padding: 8rem 0;
+    &__info {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    &__name {
+      flex-direction: column;
+      input[type="text"] {
+        width: 14.5rem;
+      }
+    }
   }
 }

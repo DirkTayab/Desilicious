@@ -2,7 +2,7 @@
 @use "../base/" as *;
 
 .menuList {
-  padding: 5rem 0;
+  padding: 10rem 0;
 
   &__title {
     @include centerAll;
@@ -15,14 +15,15 @@
     }
   }
   &__wrapper {
-    @include centerAll;
     display: flex;
     flex-direction: column;
-    max-width: 110rem;
+    margin: 0 auto;
+    max-width: 70rem;
 
     img {
       border-radius: 2rem;
       max-width: 73vw;
+      margin: 0 auto;
     }
   }
   &__content {
@@ -42,6 +43,19 @@
     p {
       margin-bottom: 2rem;
       text-align: center;
+    }
+  }
+}
+
+@include mediaQuery(520px) {
+  .menuList {
+    &__content {
+      @include evengrid(1, 1rem);
+    }
+    &__food {
+      ul {
+        flex-direction: column;
+      }
     }
   }
 }

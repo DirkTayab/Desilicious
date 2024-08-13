@@ -2,12 +2,12 @@
 @use "../base/" as *;
 
 .blog {
-  padding: 5rem 0;
+  padding: 10rem 0;
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    max-width: 50rem;
+    width: 50rem;
     margin: 0 auto;
   }
   &__card {
@@ -20,6 +20,26 @@
     }
     p {
       padding-bottom: 1.5rem;
+    }
+  }
+}
+
+// Mobile Responsive
+@include mediaQuery(520px){
+  .blog{
+    padding: 8rem 0;
+    &__wrapper{
+      max-width: 100%;
+    }
+    &__card{
+      @include centerAll;
+      flex-direction: column;
+      h4{
+        text-align: center;
+      }
+      p{
+        text-align: justify;
+      }
     }
   }
 }

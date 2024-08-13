@@ -1,66 +1,107 @@
 @use "../abstract/" as *;
 @use "../base/" as *;
 
-.product{
-    padding: 5rem 0;
+.product {
+  padding: 10rem 0;
 
-    &__wrapper{
-        justify-content: center;
-        display: flex;
-        gap: 5rem;
+  &__wrapper {
+    justify-content: center;
+    display: flex;
+    gap: 5rem;
+  }
+  &__left {
+    @include evengrid(3, 2rem);
+  }
+  &__details {
+    @include centerAll;
+    flex-direction: column;
+    p {
+      color: $clr--secondary;
+      padding-bottom: 2rem;
     }
-    &__left{
-        @include evengrid(3, 2rem);
-        
+    h4 {
+      font-size: 2rem;
     }
-    &__details{
-        @include centerAll;
-        flex-direction: column;
-        p{
-            color: $clr--secondary;
-            padding-bottom: 2rem;
-        }
-        h4{
-            font-size: 2rem;
-        }
+  }
+  &__card {
+    border-radius: 1rem;
+    border: 1px solid $clr--secondary;
+    padding: 3rem;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__category {
+    background-color: $clr--dark;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    h4 {
+      font-size: 2rem;
     }
-    &__card{
-        border-radius: 1rem;
-        border: 1px solid $clr--secondary;
-        padding: 3rem;
+    table:before {
+      content: "";
+      display: block;
+      position: relative;
+      background-color: $clr--light;
+      height: 0.2rem;
+      width: 14.5rem;
+      bottom: 1rem;
+      left: 0.5rem;
     }
-    &__right{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+  }
+  &__search {
+    max-width: 20rem;
+    input {
+      background-color: $clr--dark;
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 20rem;
     }
-    &__category{
-        background-color: $clr--dark;
-        border-radius: 1rem;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-        h4{
-            font-size: 2rem;
-        }
-        table:before{
-            content: "";
-            display: block;
-            position: relative;
-            background-color: $clr--light;
-            height: 0.2rem;
-            width: 14.5rem;
-            bottom: 1rem;
-            left: .5rem;
-        }
+    i {
+      position: relative;
+      bottom: 2.5rem;
+      left: 18rem;
     }
-    &__search{
-        max-width: 20rem;
-        i{
-            position: relative;
-            bottom: 2.5rem;
-            left: 18rem;
-        }
+  }
+}
+
+// Mobile Responsive
+@include mediaQuery(520px) {
+  .product {
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
     }
+    &__left {
+      @include evengrid(1, 5rem);
+    }
+    &__search {
+      max-width: 20rem;
+      i {
+        position: relative;
+        bottom: 2.3rem;
+        left: 13rem;
+      }
+      input {
+        width: 15rem;
+      }
+    }
+    &__category {
+      table:before {
+        content: "";
+        display: block;
+        position: relative;
+        background-color: $clr--light;
+        height: 0.2rem;
+        width: 9.5rem;
+        bottom: 1rem;
+        left: 0.5rem;
+      }
+    }
+  }
 }
